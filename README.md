@@ -1,9 +1,8 @@
-# resumo-do-lab-Microsoft-Azure
-## Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
+# Formação Microsoft AZ-900 Certification
 
-### Introdução a Computação em Nuvem 
+### Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
 
-Aprendemos:  
+## Introdução a Computação em Nuvem 
 
 - **Definição de computação de nuvem:** Recursos virtualizados disponibolizados por provedores.  
     
@@ -17,7 +16,7 @@ Aprendemos:
     
   - **OpeX:** São os custos do dia a dia necessários para manter o negócio funcionando. São despesas recorrentes e consumidas no curto prazo.  
 
-### Benefícios da Computação em Nuvem  
+## Benefícios da Computação em Nuvem  
 
 - **Alta Disponibilidade:** Recursos,serviços sempre disponivel - SLA -> 99% = 7.2h; 99.9% = 43.8 minutos; 99.95% = 21.9 minutos; se nao disponivel no prazo é compensado por credito em sua conta.   Um mês com 30 dias tem 43.200 minutos. Um SLA de 99.9% garante que o serviço estará disponível por 99.9% desse tempo, permitindo um máximo de 0.1% de inatividade (43.2 minutos).  
 
@@ -35,7 +34,7 @@ Aprendemos:
 
 - **Gerenciabilidade:** Opeçoes de capacidade de gerenciamento de recursos, Por meio: Portal, Interface Linha de comando, APIs, PowerShell.
 
-### Tipos de Serviço de Nuvem  
+## Tipos de Serviço de Nuvem  
 
 - **Iass:** Infraestrutura como serviços - Aluguel da infraestrutura básica, cliente gerencia Sistema Operacional, Aplicações, Dados.
 
@@ -43,7 +42,46 @@ Aprendemos:
 
 - **SaaS:** Software como serviço - Software pronto para uso (ex: Office 365), cliente gerencia apenas o uso e as configurações do software.
 
-- **Modelo De Responsibilidade Compartilhada:** É um conceito fundamental na computação em nuvem que define a divisão de responsabilidades de segurança entre o provedor de nuvem (Microsoft Azure) e o cliente. Entender este modelo é crucial para garantir que seus dados, aplicativos e infraestrutura estejam devidamente protegidos.
-  <img width="819" height="442" alt="image" src="https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848" />
+- **Modelo De Responsibilidade Compartilhada:** É um conceito fundamental na computação em nuvem que define a divisão de responsabilidades de segurança entre o provedor de nuvem (Microsoft Azure) e o cliente. Entender este modelo é crucial para garantir que seus dados, aplicativos e infraestrutura estejam devidamente protegidos.  
+  <img width="819" height="442" alt="image" src="https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848" />  
 
-  
+## Componentes de Arquitetura do Azure  
+
+- **Regiões:** Azure oferece abrangencia global, em 60 regioes e mais de 140 paises.  
+    - Composta por 3 ou mais datacenters proximos;  
+    - Oferecem flexibilidade e escala para reduzir latencia;  
+    - Preservam a residencia dos dados com uma oferta abrangente de conformidade;
+
+  - **Zonas de Disponibilidade:**  Projetadas para oferecer alta disponibilidade, resiliência e proteção contra falhas em datacenters.  
+      - Cada Zona de Disponibilidade é uma localização fisicamente separada dentro de uma Região. Elas possuem sua própria fonte de energia, refrigeração e rede independentes.  
+      - Proteção contra Falhas: O isolamento garante que uma falha em uma única zona (como um problema de energia, inundação ou falha de rede) não afete a disponibilidade dos recursos nas outras zonas.  
+      - Conexão de Baixa Latência: Apesar de serem fisicamente separadas, as zonas dentro de uma mesma região são conectadas por uma rede privada de fibra óptica de altíssima velocidade e baixa latência.  
+      - Resiliência para Aplicações: Ao distribuir os componentes de uma aplicação (como máquinas virtuais, bancos de dados e balanceadores de carga) entre múltiplas Zonas de Disponibilidade, você cria uma arquitetura altamente disponível.  
+
+- **Pares de Regioes:** Projetado para oferecer uma estratégia robusta de recuperação de desastres (Disaster Recovery - DR). Cada Região do Azure é emparelhada com outra região dentro da mesma área de soberania de dados (geografia). Pense nisso como um "parceiro de backup" para uma região inteira.  
+
+- **Região soberanas do Azure:**  
+    - **Serviços Governamentais dos EUA:** Atende necessidade de segurança e conformidade das agencias federeais, dos EUA.  
+    - **Azure China:** Intancia fisicamente separada dos serviços de nuvem do azure operada peça 21vianet.
+
+- **Recursos do Azuere:**
+  - Maquinas Virtuais;
+  - Contas de Armazenamento;
+  - Redes Virtuais;
+  - Serviços de Aplicativo;
+  - Banco de dados SQL;
+  - Funções;
+           
+- **Gupo de recursos:** Pense nele como uma pasta onde você armazena todos os componentes que compõem uma aplicação, um ambiente de trabalho específico ou um projeto. Em vez de gerenciar dezenas de recursos individualmente, você os coloca dentro de um Grupo de Recursos para gerenciá-los como uma unidade única.  
+    - Os recursos podem exister em apenas um grupo de recursos;  
+    - Os recursos podem existir em diferentes regiões;  
+    - Os recursos podem ser movidos para diferentes grupos de recursos;  
+    - OS aplicativos podem ultizar varios grupos de recursos;  
+
+- **Assinatura do Azure:** Para cada conta do Azure podem ter quantas assinaturas puder, cada assinatura responde a uma unica conta.  
+  - **Limite de cobrança:** Gera relatorio de cobrança e fatura separado para cada assinatura.  
+  - **Limite de controle de acesso:** gerencia e controla o acesso aos recursos que os usuarios podem provisionar com assinatura especificas.
+ 
+- **Grupos de Gerenciamento:** Organiza suas assinaturas (subscriptions), permitindo que você aplique políticas, controles de acesso e iniciativas de conformidade de forma centralizada e em larga escala.
+    - Os grupos de gerenciamento podem incluir varias assinaturas do Azure;
+    - As assinaturas herdam as condicoes aplicadas ao grupo de gerenciamento;

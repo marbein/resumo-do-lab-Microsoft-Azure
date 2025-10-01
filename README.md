@@ -6,7 +6,7 @@
 
 - **Definição de computação de nuvem:** Recursos virtualizados disponibolizados por provedores.  
     
-- **Definição de nuvem:**  
+- **Definição de nuvem:**
   - **Publica:** Nele, toda a infraestrutura de hardware (servidores, armazenamento, rede) é de propriedade e operada por um provedor de nuvem terceirizado, como Microsoft (Azure).  
   - **Privada:** Os recursos de computação são de uso exclusivo de uma única empresa ou organização. A infraestrutura pode estar fisicamente localizada no datacenter da própria organização (on-premises) ou ser hospedada por um provedor terceirizado, mas o hardware é totalmente dedicado.  
   - **Hibrida:** A nuvem híbrida é uma abordagem que combina uma nuvem privada com uma ou mais nuvens públicas. Ela permite que dados e aplicações se movam entre os dois ambientes, criando um ambiente unificado, flexível e otimizado.
@@ -47,12 +47,12 @@
 
 ## Módulo 2 -  Componentes de Arquitetura do Azure  
 
-- **Regiões:** Azure oferece abrangencia global, em 60 regioes e mais de 140 paises.  
+- **Regiões:** Azure oferece abrangencia global, em 60 regioes e mais de 140 paises.
     - Composta por 3 ou mais datacenters proximos;  
     - Oferecem flexibilidade e escala para reduzir latencia;  
     - Preservam a residencia dos dados com uma oferta abrangente de conformidade;
 
-  - **Zonas de Disponibilidade:**  Projetadas para oferecer alta disponibilidade, resiliência e proteção contra falhas em datacenters.  
+  - **Zonas de Disponibilidade:** Projetadas para oferecer alta disponibilidade, resiliência e proteção contra falhas em datacenters.
       - Cada Zona de Disponibilidade é uma localização fisicamente separada dentro de uma Região. Elas possuem sua própria fonte de energia, refrigeração e rede independentes.  
       - Proteção contra Falhas: O isolamento garante que uma falha em uma única zona (como um problema de energia, inundação ou falha de rede) não afete a disponibilidade dos recursos nas outras zonas.  
       - Conexão de Baixa Latência: Apesar de serem fisicamente separadas, as zonas dentro de uma mesma região são conectadas por uma rede privada de fibra óptica de altíssima velocidade e baixa latência.  
@@ -174,5 +174,32 @@
 - **Gerenciador de Armazenamento do Azure:** Mesma ultilidade do **AzCopy**, com interface grafica do usuario.
 
 - **Sincronização de arquivos do Azure:** É um serviço para centralizar os compartilhamentos de arquivos de uma organização nos Arquivos do Azure, mantendo a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows, bidirecional.
+
+- **Microsoft Entra ID:** É o serviço de gerencimaneto de identidades e acesso baseado em nuvem do Microsoft Azure.
+    -   Garantir Autenticação;  
+    -   Logon Unico(SSO);  
+    -   Gerenciamento de aplicativos;  
+    -   Negocios para Negocios(B2B) (login com gmail,linkid, etc;  
+    -   Gerenciamento de dispositivos;  
+
+- **Microsoft Entra Domain Services:** É um serviço de domínio gerenciado que permite a empresas usar recursos de autenticação e diretório, como ingresso no domínio, políticas de grupo, LDAP e autenticação Kerberos, para máquinas virtuais e aplicativos no Azure, sem a necessidade de implantar e gerenciar controladores de domínio tradicionais.  
+
+- **Autenticação e Autorização:**  
+    - Autenticação: Identifica a pessoa ou serviço buscando acesso a um recurso, solicitando credencial de acesso.  
+    - Autorização: Determina o nivel de acesso a uma pessoa ou serviço, define quais dados eles podem acessar.  
+
+- **Autentincação Multifator:** Fornce segurança adicional para identidades, exigindo dois ou mais elementos para autenticação.  
+
+- **Autenticação B2B:** É o processo de verificar a identidade de usuários, sistemas e aplicativos de empresas parceiras para garantir que apenas pessoas e serviços autorizados acessem recursos e dados compartilhados, exemplo cadastro ou long usando gmail.   
+
+- **Autenticação B2C:** Fornece a identidade de empresa para cliente como um serviço. Seus clientes podem usar as próprias identidades de conta social, empresarial ou local preferenciais para obter acesso de logon único a seus aplicativos e APIs.  
+
+- **Acesso Condicional:** Em sua definição mais simples, as políticas de Acesso Condicional são instruções se-então, se um usuário quiser acessar um recurso, então ele deverá concluir uma ação. Por exemplo: se um usuário quiser acessar um aplicativo ou serviço como o Microsoft 365, ele deverá executar a autenticação multifator para obter acesso.  
+
+- **Controle de acessso baseado em função:** É um método de segurança que gerencia quem pode acessar quais recursos em um sistema, atribuindo permissões de acesso a funções (cargos) específicas, em vez de indivíduos. Em vez de conceder permissões personalizadas, os usuários recebem uma ou mais funções, e as permissões são associadas a essas funções.
+
+- **Cofiança Zero:** É um modelo de segurança que pressupõe violação e verifica cada solicitação como se tivesse se originado de uma rede descontrolada.
+
+- **Microsoft Defender para Nuvem:** É um serviço de monitoramento que fornce proteção contra ameaças nos datacenters azure e locais.
 
 - 

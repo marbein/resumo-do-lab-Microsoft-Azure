@@ -34,14 +34,11 @@
 
 - **Gerenciabilidade:** Opeçoes de capacidade de gerenciamento de recursos, Por meio: Portal, Interface Linha de comando, APIs, PowerShell.
 
-## Tipos de Serviço de Nuvem  
-
-- **Iass:** Infraestrutura como serviços - Aluguel da infraestrutura básica, cliente gerencia Sistema Operacional, Aplicações, Dados.
-
-- **Paas:** Plataforma como serviço - Plataforma para desenvolver e rodar apps, cliente gerencia Apenas suas Aplicações e Dados.	
-
-- **SaaS:** Software como serviço - Software pronto para uso (ex: Office 365), cliente gerencia apenas o uso e as configurações do software.
-
+- **Tipos de Serviço de Nuvem**: 
+    - **Iass:** Infraestrutura como serviços - Aluguel da infraestrutura básica, cliente gerencia Sistema Operacional, Aplicações, Dados.
+    - **Paas:** Plataforma como serviço - Plataforma para desenvolver e rodar apps, cliente gerencia Apenas suas Aplicações e Dados.	
+    - **SaaS:** Software como serviço - Software pronto para uso (ex: Office 365), cliente gerencia apenas o uso e as configurações do software.
+      
 - **Modelo De Responsibilidade Compartilhada:** É um conceito fundamental na computação em nuvem que define a divisão de responsabilidades de segurança entre o provedor de nuvem (Microsoft Azure) e o cliente. Entender este modelo é crucial para garantir que seus dados, aplicativos e infraestrutura estejam devidamente protegidos.  
   <img width="819" height="442" alt="image" src="https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848" />  
 
@@ -52,11 +49,10 @@
     - Oferecem flexibilidade e escala para reduzir latencia;  
     - Preservam a residencia dos dados com uma oferta abrangente de conformidade;
 
-  - **Zonas de Disponibilidade:** Projetadas para oferecer alta disponibilidade, resiliência e proteção contra falhas em datacenters.
-      - Cada Zona de Disponibilidade é uma localização fisicamente separada dentro de uma Região. Elas possuem sua própria fonte de energia, refrigeração e rede independentes.  
-      - Proteção contra Falhas: O isolamento garante que uma falha em uma única zona (como um problema de energia, inundação ou falha de rede) não afete a disponibilidade dos recursos nas outras zonas.  
-      - Conexão de Baixa Latência: Apesar de serem fisicamente separadas, as zonas dentro de uma mesma região são conectadas por uma rede privada de fibra óptica de altíssima velocidade e baixa latência.  
-      - Resiliência para Aplicações: Ao distribuir os componentes de uma aplicação (como máquinas virtuais, bancos de dados e balanceadores de carga) entre múltiplas Zonas de Disponibilidade, você cria uma arquitetura altamente disponível.  
+- **Zonas de Disponibilidade:** Projetadas para oferecer alta disponibilidade, resiliência e proteção contra falhas em datacenters. Cada Zona de Disponibilidade é uma localização fisicamente separada dentro de uma Região. Elas possuem sua própria fonte de energia, refrigeração e rede independentes.  
+    - Proteção contra Falhas: O isolamento garante que uma falha em uma única zona (como um problema de energia, inundação ou falha de rede) não afete a disponibilidade dos recursos nas outras zonas.  
+    - Conexão de Baixa Latência: Apesar de serem fisicamente separadas, as zonas dentro de uma mesma região são conectadas por uma rede privada de fibra óptica de altíssima velocidade e baixa latência.  
+    - Resiliência para Aplicações: Ao distribuir os componentes de uma aplicação (como máquinas virtuais, bancos de dados e balanceadores de carga) entre múltiplas Zonas de Disponibilidade, você cria uma arquitetura altamente disponível.  
 
 - **Pares de Regioes:** Projetado para oferecer uma estratégia robusta de recuperação de desastres (Disaster Recovery - DR). Cada Região do Azure é emparelhada com outra região dentro da mesma área de soberania de dados (geografia). Pense nisso como um "parceiro de backup" para uma região inteira.  
 
@@ -202,4 +198,6 @@
 
 - **Microsoft Defender para Nuvem:** É um serviço de monitoramento que fornce proteção contra ameaças nos datacenters azure e locais.
 
-- 
+## Módulo 3 - Gerenciamento de Custos na Azure
+
+

@@ -85,3 +85,46 @@
 - **Grupos de Gerenciamento:** Organiza suas assinaturas (subscriptions), permitindo que você aplique políticas, controles de acesso e iniciativas de conformidade de forma centralizada e em larga escala.
     - Os grupos de gerenciamento podem incluir varias assinaturas do Azure;
     - As assinaturas herdam as condicoes aplicadas ao grupo de gerenciamento;
+      
+- **Serviço de computação Azure:** Serviço sob demanda fornece recursos de computação, como discos, processadores, memoria, rede e OS.
+
+- **Maquinas virtuais do Azure:**  
+    - São emulacoes de software de computadores fisicos;  
+    - Inclui processador virtual, memoria, armazenamento e rede;  
+    - Oferta Iaas que oferece personalização e controle total;  
+
+- **Cojunto de dimensionamento de VMs:** Oferece uma oportunidade de balanceamento de carga para dimensionar os recursos automaticamente.
+
+- **Conjuntos de disponivilidade de VM:** É uma configuração para garantir a alta disponibilidade de aplicações executadas em máquinas virtuais (VMs). Trata-se de um agrupamento lógico de duas ou mais VMs dentro de um mesmo datacenter do Azure, que as distribui de forma inteligente para protegê-las contra falhas de hardware e atualizações planejadas pela Microsoft.  
+
+- **Area de trabalho virtual do Azure:** É uma virtualização de area de trbalho e aplicativo executada em nuvem.  
+
+- **Serviços de conteineres do Azeure:** É um ambiente leve e virtualizado que nao exige o gerenciamento do OS e pode responder a alteracoes sob demanda.  
+    - **Instancia de Conteriner Azure:** PaaS que executa um conteiner ou pod de conteineres dno azure, sem necessidade de uma VM;  
+    - **Aplicativo de Conteriner Azure:** PaaS, como instancias de conterineres que pode balancer a carga e escalar;  
+    - **Serviço de kubernetes do Azure:** Serviço de osquestração para contineres com arquiteturas distribuidas e grande volumes de conteineres;  
+
+- **Azure Functions:** PaaS que da suporte a operecao de computacao sem servidor, evento é executado quando chamado sem exigir uma infraestrutura de servidor.  
+
+-  **Comparar opçoes de computação Azure:**  
+    - **Maquinas virtuais:**  
+        - Servidor em nuvem suporte em ambientes Windows ou Linux;  
+        -  Util para migração lift-and-shift para nuvem;  
+        -  Pacote de OS completo;  
+    -  **Area de trabalho virtual:**  
+        -  Fornece uma area de trabalho do windows baseada em nuvem;  
+        -  App dedicado para conexao e uso de qualquer navegador;  
+        -  Logon de varios usuario no mesmo computador;  
+    - **Conterineres:**  
+        - Ambiente leve em miniatura adequado para execução de microserviço;  
+        - Projetado para escabilidade e resiliencia por meio da orquestração;  
+        - Varios conteineres podem ficar em um OS do host;  
+
+- **Serviços de Aplicativos do Azure:** Uma plataforma totalmente gerenciada para croar, implantar e dimensionar aplicativos WEB e APIs rapidamente.  
+    - Trabalha com .NET, .NET Core, Nodes.js, Java, Python ou php;  
+    - PaaS;  
+
+- **Serviço de rede do Azure:** A rede vistual do azure(VNet) permirte que os recursos Azure se comuniquem uns com outros com a internet e com redes locais.  
+    - **Gateway de VPN:** É usada para enviar trafego criptografado entre uma rede virtual do Azure e uma no local pela internet publica;
+    - **ExpressRoute:** Estende redes locais para o Azure por meio de um conexao privada facilitada por um provedor de conectividade;
+    - **DNS do Azure:** É um serviço de hospedagem para domínios DNS que fornece a resolução de nomes de domínio para endereços IP, utilizando a infraestrutura global e robusta do Microsoft Azure;

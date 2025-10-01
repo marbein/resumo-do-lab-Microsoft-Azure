@@ -18,7 +18,12 @@
 
 ## Módulo 1 - Benefícios da Computação em Nuvem  
 
-- **Alta Disponibilidade:** Recursos,serviços sempre disponivel - SLA -> 99% = 7.2h; 99.9% = 43.8 minutos; 99.95% = 21.9 minutos; se nao disponivel no prazo é compensado por credito em sua conta.   Um mês com 30 dias tem 43.200 minutos. Um SLA de 99.9% garante que o serviço estará disponível por 99.9% desse tempo, permitindo um máximo de 0.1% de inatividade (43.2 minutos).  
+- **Alta Disponibilidade:** Recursos,serviços sempre disponivel, SLA.
+    - 99% = 7.2h;
+    - 99.9% = 43.8 minutos;
+    - 99.95% = 21.9 minutos;
+    - se nao disponivel no prazo é compensado com credito em sua conta;
+    - Um mês com 30 dias tem 43.200 minutos. Um SLA de 99.9% garante que o serviço estará disponível por 99.9% desse tempo, permitindo um máximo de 0.1% de inatividade (43.2 minutos).  
 
 - **Escabilidade:** Capacidade de ajustar recurso para atender demanda, exemplo adicionar disco ( aumentar tamanho HD servidor), RAM, processador, etc.
 

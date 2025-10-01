@@ -16,7 +16,7 @@
     
   - **OpeX:** São os custos do dia a dia necessários para manter o negócio funcionando. São despesas recorrentes e consumidas no curto prazo.  
 
-## Benefícios da Computação em Nuvem  
+## Módulo 1 - Benefícios da Computação em Nuvem  
 
 - **Alta Disponibilidade:** Recursos,serviços sempre disponivel - SLA -> 99% = 7.2h; 99.9% = 43.8 minutos; 99.95% = 21.9 minutos; se nao disponivel no prazo é compensado por credito em sua conta.   Um mês com 30 dias tem 43.200 minutos. Um SLA de 99.9% garante que o serviço estará disponível por 99.9% desse tempo, permitindo um máximo de 0.1% de inatividade (43.2 minutos).  
 
@@ -45,7 +45,7 @@
 - **Modelo De Responsibilidade Compartilhada:** É um conceito fundamental na computação em nuvem que define a divisão de responsabilidades de segurança entre o provedor de nuvem (Microsoft Azure) e o cliente. Entender este modelo é crucial para garantir que seus dados, aplicativos e infraestrutura estejam devidamente protegidos.  
   <img width="819" height="442" alt="image" src="https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848" />  
 
-## Componentes de Arquitetura do Azure  
+## Módulo 2 -  Componentes de Arquitetura do Azure  
 
 - **Regiões:** Azure oferece abrangencia global, em 60 regioes e mais de 140 paises.  
     - Composta por 3 ou mais datacenters proximos;  
@@ -127,4 +127,52 @@
 - **Serviço de rede do Azure:** A rede vistual do azure(VNet) permirte que os recursos Azure se comuniquem uns com outros com a internet e com redes locais.  
     - **Gateway de VPN:** É usada para enviar trafego criptografado entre uma rede virtual do Azure e uma no local pela internet publica;
     - **ExpressRoute:** Estende redes locais para o Azure por meio de um conexao privada facilitada por um provedor de conectividade;
-    - **DNS do Azure:** É um serviço de hospedagem para domínios DNS que fornece a resolução de nomes de domínio para endereços IP, utilizando a infraestrutura global e robusta do Microsoft Azure;
+    - **DNS do Azure:** É um serviço de hospedagem para domínios DNS que fornece a resolução de nomes de domínio para endereços IP, utilizando a infraestrutura global e robusta do Microsoft Azure;  
+ 
+- **Contas de Armazenamento:**  
+    - Nome exclusivo;  
+    - Determinar os serviços de armazenamento e as opçoes de redundancia;
+      
+- **Redundancia de armazenamento:**  
+    - **LRS:** É a opção mais básica e de menor custo. O Azure mantém três cópias dos seus dados de forma síncrona dentro de uma única instalação física (um único datacenter) na região primária. Cada cópia está em um rack de armazenamento e domínio de falha diferente.  
+    - **ZRS:** Mantém três cópias dos seus dados de forma síncrona, mas distribuídas entre três Zonas de Disponibilidade diferentes dentro da mesma região primária. Cada Zona de Disponibilidade é um datacenter fisicamente separado com energia, refrigeração e rede independentes.  
+    - **GRS:** É a evolução do LRS. Ele primeiro copia seus dados três vezes dentro de um único datacenter na região primária (como o LRS) e, em seguida, replica esses dados de forma assíncrona para um único datacenter na região secundária, onde também são mantidas três cópias. Total de seis cópias.  
+    - **GZRS:** Combina o melhor dos dois mundos. Ele replica seus dados entre três Zonas de Disponibilidade na região primária (como o ZRS) e também replica os dados de forma assíncrona para um único local na região secundária.  
+
+- **Serviço de Armazenamento:**  
+    - **Blob do Azure:** Otimizado para armazenamento de quantidade massiva de dados nao estruturado, como texto ou dados binario;  
+    - **Disco do Azure:** Fornece discos para maquinas virtuais, aplicativos e outros serviços;  
+    - **Fila do Azure:** Serviço de armazenamento de mensagens que fornece armazenamento e recuperação para grande quantidades de mensagens;  
+    - **Arquivos do Azure:** Configura um compartilhamento de arquivos de rede altamente disponivel que pode ser ultilizado usando o protoloco bloco de mensagens do servidor;  
+    - **Tabelas do Azure:** Fornece uma opção de chave/atributo para armazenamento de dados estruturado nao relacionais com um design sem esquema;  
+
+- **Pontos de extremidade publicos do serviço de Armazenamento:** são os nomes de host dos serviços, que permitem acesso público à conta de armazenamento na Internet.  
+    - Serviço Blob     -      privatelink.**blob**.core.windows.net  
+    - Data Lake Storage  -    privatelink.**dfs**.core.windows.net  
+    - Serviço de arquivos  -  privatelink.**file**.core.windows.net  
+    - Serviço Fila       -    privatelink.**queue**.core.windows.net  
+    - Serviço Tabela     -    privatelink.**table**.core.windows.net  
+
+- **Camadas de acesso de Armazenamento do Azure:**  
+    - Frequente: Otimizado para uso de dados com acesso frequencia;  
+    - Esporadico: Otimizado para uso de dados com menos frequencia por pelo menos 30 dias;  
+    - Frio: Otimizado para uso de dados com pouca frequencia por pelo menos 90 dias;  
+    - Arquivo morto: Otimizado para uso de dados raramente frequencia por pelo menos 180 dias com requisitos de latencia flexivel;  
+
+- **Migrações para Azure:** Migrar uma infraestrutura On-premises para nuvem Azure.  
+    - Plataforma unificada;  
+    - Intervalo de ferramentas intregras e automomas;  
+    - Avaliação e Migração de legado;  
+      
+- **Azure Data Box:** Usados para transferir grandes dados de um data-center on-premises para um nuvem da Azure.  
+    - Armazena date 80TB;  
+    - Move um backups de recuperacão;  
+    - Proteje seus dados em um caixa robusta;
+
+- **AzCopy:** É um utilitário de linha de comando que você pode usar para copiar blobs ou arquivos de ou para uma conta de armazenamento, somente para um lado.
+
+- **Gerenciador de Armazenamento do Azure:** Mesma ultilidade do **AzCopy**, com interface grafica do usuario.
+
+- **Sincronização de arquivos do Azure:** É um serviço para centralizar os compartilhamentos de arquivos de uma organização nos Arquivos do Azure, mantendo a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows, bidirecional.
+
+- 

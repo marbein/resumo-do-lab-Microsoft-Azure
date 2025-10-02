@@ -1,6 +1,7 @@
 # Formação Microsoft AZ-900 Certification
 ### Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
-## Introdução a Computação em Nuvem 
+## Módulo 1 - Conceito de Nuvem
+### Topico 1 - Introdução a Computação em Nuvem
 - **Definição de computação de nuvem:** Recursos virtualizados disponibolizados por provedores.     
 - **Definição de nuvem:**
   - **Publica:** Nele, toda a infraestrutura de hardware (servidores, armazenamento, rede) é de propriedade e operada por um provedor de nuvem terceirizado, como Microsoft (Azure).
@@ -8,8 +9,8 @@
   - **Hibrida:** A nuvem híbrida é uma abordagem que combina uma nuvem privada com uma ou mais nuvens públicas. Ela permite que dados e aplicações se movam entre os dois ambientes, criando um ambiente unificado, flexível e otimizado.   
 - **Definição:**
   - **CapEx:** Refere-se aos investimentos em bens de capital que a empresa utilizará por um longo período, geralmente mais de um ano. Pense nisso como grandes compras que melhoram ou expandem a capacidade da empresa.    
-  - **OpeX:** São os custos do dia a dia necessários para manter o negócio funcionando. São despesas recorrentes e consumidas no curto prazo.  
-## Módulo 1 - Benefícios da Computação em Nuvem
+  - **OpeX:** São os custos do dia a dia necessários para manter o negócio funcionando. São despesas recorrentes e consumidas no curto prazo.
+### Topico 2 - Benefícios da Computação em Nuvem 
 - **Alta Disponibilidade:** Recursos,serviços sempre disponivel, SLA.
     - 99% = 7.2h;
     - 99.9% = 43.8 minutos;
@@ -23,13 +24,14 @@
 - **Segurança:** Nuvem (provedor) oferece varias ferramentas de segurança , mas implementação (nuvem) de muita deles devem ser realizada pelo cliente.
 - **Governança:** É o conjunto de mecanismos, processos e ferramentas que permitem a uma organização manter o controle sobre seus recursos e assinaturas na nuvem. O objetivo é garantir que o uso do Azure esteja alinhado com as políticas corporativas, os requisitos regulatórios e as melhores práticas de gerenciamento, sem impedir a agilidade que a nuvem oferece.
 - **Gerenciabilidade:** Opeçoes de capacidade de gerenciamento de recursos, Por meio: Portal, Interface Linha de comando, APIs, PowerShell.
-- **Tipos de Serviço de Nuvem**:
-    - **Iass:** Infraestrutura como serviços - Aluguel da infraestrutura básica, cliente gerencia Sistema Operacional, Aplicações, Dados.
-    - **Paas:** Plataforma como serviço - Plataforma para desenvolver e rodar apps, cliente gerencia Apenas suas Aplicações e Dados.	
-    - **SaaS:** Software como serviço - Software pronto para uso (ex: Office 365), cliente gerencia apenas o uso e as configurações do software.      
+### Topico 3 - Tipos de Serviço de Nuvem
+  - **Iass:** Infraestrutura como serviços - Aluguel da infraestrutura básica, cliente gerencia Sistema Operacional, Aplicações, Dados.
+  - **Paas:** Plataforma como serviço - Plataforma para desenvolver e rodar apps, cliente gerencia Apenas suas Aplicações e Dados.	
+  - **SaaS:** Software como serviço - Software pronto para uso (ex: Office 365), cliente gerencia apenas o uso e as configurações do software.      
 - **Modelo De Responsibilidade Compartilhada:** É um conceito fundamental na computação em nuvem que define a divisão de responsabilidades de segurança entre o provedor de nuvem (Microsoft Azure) e o cliente. Entender este modelo é crucial para garantir que seus dados, aplicativos e infraestrutura estejam devidamente protegidos.
   <img width="819" height="442" alt="image" src="https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848" /> 
 ## Módulo 2 -  Componentes de Arquitetura do Azure
+### Topico 1 - Arquitetura e serviços do Azure
 - **Regiões:** Azure oferece abrangencia global, em 60 regioes e mais de 140 paises.
     - Composta por 3 ou mais datacenters proximos;
     - Oferecem flexibilidade e escala para reduzir latencia;
@@ -42,7 +44,7 @@
 - **Região soberanas do Azure:**
     - **Serviços Governamentais dos EUA:** Atende necessidade de segurança e conformidade das agencias federeais, dos EUA.
     - **Azure China:** Intancia fisicamente separada dos serviços de nuvem do azure operada peça 21vianet.
-- **Recursos do Azuere:**
+- **Recursos do Azure:**
   - Maquinas Virtuais;
   - Contas de Armazenamento;
   - Redes Virtuais;
@@ -59,7 +61,8 @@
   - **Limite de controle de acesso:** gerencia e controla o acesso aos recursos que os usuarios podem provisionar com assinatura especificas. 
 - **Grupos de Gerenciamento:** Organiza suas assinaturas (subscriptions), permitindo que você aplique políticas, controles de acesso e iniciativas de conformidade de forma centralizada e em larga escala.
     - Os grupos de gerenciamento podem incluir varias assinaturas do Azure;
-    - As assinaturas herdam as condicoes aplicadas ao grupo de gerenciamento;      
+    - As assinaturas herdam as condicoes aplicadas ao grupo de gerenciamento;
+### Topico 2 - Computação e Rede na Azure
 - **Serviço de computação Azure:** Serviço sob demanda fornece recursos de computação, como discos, processadores, memoria, rede e OS.
 - **Maquinas virtuais do Azure:**
     - São emulacoes de software de computadores fisicos;
@@ -93,6 +96,7 @@
     - **Gateway de VPN:** É usada para enviar trafego criptografado entre uma rede virtual do Azure e uma no local pela internet publica;
     - **ExpressRoute:** Estende redes locais para o Azure por meio de um conexao privada facilitada por um provedor de conectividade;
     - **DNS do Azure:** É um serviço de hospedagem para domínios DNS que fornece a resolução de nomes de domínio para endereços IP, utilizando a infraestrutura global e robusta do Microsoft Azure;
+### Topico 3 - Armazenamento do Azure
 - **Contas de Armazenamento:**
     - Nome exclusivo;
     - Determinar os serviços de armazenamento e as opçoes de redundancia;      
@@ -129,6 +133,7 @@
 - **AzCopy:** É um utilitário de linha de comando que você pode usar para copiar blobs ou arquivos de ou para uma conta de armazenamento, somente para um lado.
 - **Gerenciador de Armazenamento do Azure:** Mesma ultilidade do **AzCopy**, com interface grafica do usuario.
 - **Sincronização de arquivos do Azure:** É um serviço para centralizar os compartilhamentos de arquivos de uma organização nos Arquivos do Azure, mantendo a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows, bidirecional.
+### Topico 4 - Identidade, Acesso e Segurança
 - **Microsoft Entra ID:** É o serviço de gerencimaneto de identidades e acesso baseado em nuvem do Microsoft Azure.
     -   Garantir Autenticação;
     -   Logon Unico(SSO);
@@ -146,7 +151,8 @@
 - **Controle de acessso baseado em função:** É um método de segurança que gerencia quem pode acessar quais recursos em um sistema, atribuindo permissões de acesso a funções (cargos) específicas, em vez de indivíduos. Em vez de conceder permissões personalizadas, os usuários recebem uma ou mais funções, e as permissões são associadas a essas funções.
 - **Cofiança Zero:** É um modelo de segurança que pressupõe violação e verifica cada solicitação como se tivesse se originado de uma rede descontrolada.
 - **Microsoft Defender para Nuvem:** É um serviço de monitoramento que fornce proteção contra ameaças nos datacenters azure e locais.
-# Módulo 3 - Gerenciamento de Custos na Azure
+# Módulo 3 - Gerenciamento e Governança
+### Topico 1 - Gerenciamento de Custos na Azure
 - **Fatores que afetam os custos:**
     - Tipo de recursos:  alguns recursos com maiores custos que outros;
     - Consumo: Modelo de pagamento confome o uso, consumo é um dos mairoes geradores de custo;
@@ -169,7 +175,7 @@
         - Alertas: quando o custo excede o limite estipulado;
         - Recomendação: recomendaçoes de como usar meus recursos;
 - **Marcas(TAGs):** **Não sao obrigatorio e Nao sao Herdadas** Tags são elementos que você aplica aos seus recursos do Azure. São pares de chave-valor que ajudam a identificar recursos com base em configurações relevantes para a sua organização. Se quiser rastrear o ambiente de implantação dos seus recursos.
-### Topico 2 - Governança e Conformidade
+### Topico 2 - Primeiros Passos com Governança e Conformidade na Azure
 - **Azure Policy::** ajudar impor padroes organizacionais e a avilar a conformidade em escala. Avalia e identifica os recursos do azure que nao atende as suas politicas.
   - Non-Compliant:
   - Remediantion: 

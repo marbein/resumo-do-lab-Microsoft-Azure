@@ -3,7 +3,7 @@
 ## Introdução a Computação em Nuvem 
 - **Definição de computação de nuvem:** Recursos virtualizados disponibolizados por provedores.     
 - **Definição de nuvem:**
-  - **Publica:** Nele, toda a infraestrutura de hardware (servidores, armazenamento, rede) é de propriedade e operada por um provedor de nuvem terceirizado, como Microsoft (Azure).\
+  - **Publica:** Nele, toda a infraestrutura de hardware (servidores, armazenamento, rede) é de propriedade e operada por um provedor de nuvem terceirizado, como Microsoft (Azure).
   - **Privada:** Os recursos de computação são de uso exclusivo de uma única empresa ou organização. A infraestrutura pode estar fisicamente localizada no datacenter da própria organização (on-premises) ou ser hospedada por um provedor terceirizado, mas o hardware é totalmente dedicado.
   - **Hibrida:** A nuvem híbrida é uma abordagem que combina uma nuvem privada com uma ou mais nuvens públicas. Ela permite que dados e aplicações se movam entre os dois ambientes, criando um ambiente unificado, flexível e otimizado.   
 - **Definição:**

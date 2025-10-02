@@ -146,7 +146,7 @@
 - **Controle de acessso baseado em função:** É um método de segurança que gerencia quem pode acessar quais recursos em um sistema, atribuindo permissões de acesso a funções (cargos) específicas, em vez de indivíduos. Em vez de conceder permissões personalizadas, os usuários recebem uma ou mais funções, e as permissões são associadas a essas funções.
 - **Cofiança Zero:** É um modelo de segurança que pressupõe violação e verifica cada solicitação como se tivesse se originado de uma rede descontrolada.
 - **Microsoft Defender para Nuvem:** É um serviço de monitoramento que fornce proteção contra ameaças nos datacenters azure e locais.
-## Módulo 3 - Gerenciamento de Custos na Azure
+# Módulo 3 - Gerenciamento de Custos na Azure
 - **Fatores que afetam os custos:**
     - Tipo de recursos:  alguns recursos com maiores custos que outros;
     - Consumo: Modelo de pagamento confome o uso, consumo é um dos mairoes geradores de custo;
@@ -169,5 +169,12 @@
         - Alertas: quando o custo excede o limite estipulado;
         - Recomendação: recomendaçoes de como usar meus recursos;
 - **Marcas(TAGs):** **Não sao obrigatorio e Nao sao Herdadas** Tags são elementos que você aplica aos seus recursos do Azure. São pares de chave-valor que ajudam a identificar recursos com base em configurações relevantes para a sua organização. Se quiser rastrear o ambiente de implantação dos seus recursos.
--        
-
+### TOPICO 2 - GOVERNANÇA E CONFORMIDADE
+- **Azure Policy::** ajudar impor padroes organizacionais e a avilar a conformidade em escala. Avalia e identifica os recursos do azure que nao atende as suas politicas.
+  - Non-Compliant:
+  - Remediantion: 
+  - Compliant: esta seguindo os padroes selecionado;
+- **Bloqueio de Recursos:** Proteje um recurso do Azure de exclusao ou modificação acidental.Pode ser adicionado na Assinatura, Grupo de recurso ou niveis de recursos individuais. Blouqeios sao herdaveis.
+- **Portal de confiança do serviço:** Fornece uma variedade de conteúdos, ferramentas e outros recursos sobre como os serviços cloud da Microsoft protegem os seus dados e como pode gerir a segurança e conformidade de dados na cloud para a sua organização.
+- **Microsoft Purview:** É uma familia de soluçoes de governança, risco e conformidade de dados, usado para auditar dados.
+- 

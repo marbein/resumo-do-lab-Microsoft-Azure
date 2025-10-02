@@ -1,141 +1,205 @@
-Com certeza! Com base nas suas excelentes anotações, preparei o material conforme as sugestões, organizando tudo para otimizar ainda mais seus estudos para a certificação AZ-900.
+# Resumo de Estudos: Certificação Microsoft AZ-900 (Azure Fundamentals)
 
-Aqui estão as mudanças e adições:
-
----
-
-### 1. Resumo Conciso dos Pontos-Chave
-
-Uma versão compacta dos conceitos mais importantes para uma revisão rápida.
-
-* **Conceitos de Nuvem:**
-    * **Modelos:** Pública (provedor gerencia tudo), Privada (uso exclusivo), Híbrida (combinação das duas).
-    * **Financeiro:** **CapEx** (gasto inicial em infraestrutura física) é trocado por **OpEx** (gasto contínuo, pague pelo uso).
-    * **Benefícios:** Alta Disponibilidade, Escalabilidade (aumentar poder), Elasticidade (ajuste automático à demanda), Confiabilidade e Segurança.
-    * **Serviços:** **IaaS** (você gerencia o S.O. e apps), **PaaS** (você gerencia só os apps e dados), **SaaS** (você só usa o software).
-
-* **Arquitetura e Serviços do Azure:**
-    * **Estrutura Global:** **Regiões** são locais geográficos com múltiplos datacenters. **Zonas de Disponibilidade** são datacenters isolados dentro de uma mesma região para alta disponibilidade.
-    * **Organização:** **Grupos de Gerenciamento** (para políticas em várias assinaturas) > **Assinaturas** (limite de cobrança e acesso) > **Grupos de Recursos** (container para recursos de uma solução).
-    * **Computação:**
-        * **Máquinas Virtuais (VMs):** IaaS, controle total.
-        * **Contêineres (ACI/AKS):** Isolamento de apps, mais leves que VMs.
-        * **Azure Functions:** Computação sem servidor (Serverless), executa código baseado em eventos.
-    * **Rede:** **VNet** (rede virtual isolada), **VPN Gateway** (conecta VNet à rede local via internet), **ExpressRoute** (conexão privada e dedicada à rede local).
-    * **Armazenamento:**
-        * **Blob:** Objetos não estruturados (imagens, vídeos).
-        * **Arquivos (Files):** Compartilhamentos de arquivos de rede (SMB).
-        * **Discos (Disks):** Discos para VMs.
-        * **Redundância:** **LRS** (local), **ZRS** (entre zonas), **GRS** (entre regiões).
-
-* **Gerenciamento e Governança:**
-    * **Identidade:** **Microsoft Entra ID** é o serviço de identidade e acesso, suportando Autenticação Multifator (MFA) e Acesso Condicional.
-    * **Segurança:** **Microsoft Defender para Nuvem** monitora e protege cargas de trabalho. **Confiança Zero (Zero Trust)** é o modelo de "nunca confiar, sempre verificar".
-    * **Custos:** Use a **Calculadora de Preços** para estimar custos e **Tags** para organizar e rastrear gastos por projeto ou departamento.
-    * **Governança:** **Azure Policy** para impor regras e conformidade nos recursos. **Bloqueios de Recursos** para prevenir exclusões acidentais.
-    * **Monitoramento:** **Azure Monitor** coleta e analisa telemetria. **Azure Service Health** informa sobre a saúde da plataforma Azure.
+Este repositório contém um resumo consolidado dos principais conceitos abordados no exame de certificação AZ-900. O objetivo é servir como um guia de revisão rápido, visual e eficiente para a comunidade.
 
 ---
 
-### 2. Perguntas no Estilo do Exame
+## 🧭 Sumário
 
-Teste seu conhecimento com estas perguntas baseadas em suas anotações.
-
-**Pergunta 1:**
-Sua empresa decidiu migrar um datacenter local para o Azure. Eles querem trocar o grande investimento inicial em servidores físicos por um modelo de custo mensal baseado no consumo. Qual termo descreve essa mudança de modelo financeiro?
-A) De OpEx para CapEx
-B) De IaaS para PaaS
-C) De CapEx para OpEx
-D) De nuvem privada para nuvem híbrida
-
-**Pergunta 2:**
-De acordo com o Modelo de Responsabilidade Compartilhada, ao implantar uma Máquina Virtual (VM) no Azure (IaaS), de quem é a responsabilidade de aplicar patches de segurança no sistema operacional Windows Server?
-A) Apenas da Microsoft.
-B) Apenas do cliente.
-C) A responsabilidade é compartilhada; ambos devem aplicar os patches.
-D) De ninguém, pois o sistema é atualizado automaticamente.
-
-**Pergunta 3:**
-Você precisa garantir que todos os recursos criados em uma assinatura específica tenham uma tag "Departamento" preenchida. Qual serviço do Azure você deve usar para impor essa regra?
-A) Microsoft Entra ID
-B) Bloqueios de Recursos (Resource Locks)
-C) Azure Monitor
-D) Azure Policy
-
-**Pergunta 4:**
-Uma aplicação precisa armazenar milhões de arquivos de imagem e vídeo que serão acessados publicamente pela internet. Qual tipo de armazenamento do Azure é o mais adequado para este cenário?
-A) Arquivos do Azure (Azure Files)
-B) Discos do Azure (Azure Disks)
-C) Tabelas do Azure (Azure Tables)
-D) Blob do Azure (Azure Blob Storage)
-
-*(Respostas no final)*
+- [Módulo 1: Conceitos de Nuvem](#-módulo-1-conceitos-de-nuvem)
+  - [Tópico 1: Introdução à Computação em Nuvem](#tópico-1-introdução-à-computação-em-nuvem)
+  - [Tópico 2: Benefícios da Computação em Nuvem](#tópico-2-benefícios-da-computação-em-nuvem)
+  - [Tópico 3: Tipos de Serviço de Nuvem](#tópico-3-tipos-de-serviço-de-nuvem)
+- [Módulo 2: Componentes de Arquitetura do Azure](#-módulo-2-componentes-de-arquitetura-do-azure)
+  - [Tópico 1: Arquitetura e Serviços do Azure](#tópico-1-arquitetura-e-serviços-do-azure)
+  - [Tópico 2: Computação e Rede no Azure](#tópico-2-computação-e-rede-no-azure)
+  - [Tópico 3: Armazenamento do Azure](#tópico-3-armazenamento-do-azure)
+  - [Tópico 4: Identidade, Acesso e Segurança](#tópico-4-identidade-acesso-e-segurança)
+- [Módulo 3: Gerenciamento e Governança](#-módulo-3-gerenciamento-e-governança)
+  - [Tópico 1: Gerenciamento de Custos no Azure](#tópico-1-gerenciamento-de-custos-no-azure)
+  - [Tópico 2: Governança e Conformidade no Azure](#tópico-2-governança-e-conformidade-no-azure)
+  - [Tópico 3: Ferramentas de Gerenciamento e Implantação](#tópico-3-ferramentas-de-gerenciamento-e-implantação)
+  - [Tópico 4: Ferramentas de Monitoramento do Azure](#tópico-4-ferramentas-de-monitoramento-do-azure)
+- [📚 Referências e Links Úteis](#-referências-e-links-úteis)
 
 ---
 
-### 3. Aprofundamento de Tópicos
+## ☁️ Módulo 1: Conceitos de Nuvem
 
-Explorando com mais detalhes os exemplos sugeridos.
+### Tópico 1: Introdução à Computação em Nuvem
 
-#### a) Diferenças Práticas entre GRS e GZRS
+> **Computação em Nuvem** é a entrega de recursos de computação (servidores, armazenamento, redes, software) pela internet, disponibilizados por provedores.
 
-Ambos oferecem redundância entre regiões, mas o nível de proteção na região primária é diferente.
+- **Modelos de Nuvem:**
+  - **Pública:** A infraestrutura pertence e é operada por um provedor (ex: Microsoft Azure). Os recursos são compartilhados por múltiplos clientes.
+  - **Privada:** Os recursos são de uso exclusivo de uma única organização. Pode ser hospedada localmente (*on-premises*) ou por um terceiro.
+  - **Híbrida:** Combina nuvem privada com uma ou mais nuvens públicas, permitindo que dados e aplicações se movam entre os ambientes.
 
-| Característica | **GRS (Armazenamento com Redundância Geográfica)** | **GZRS (Armazenamento com Redundância de Zona Geográfica)** |
+- **Modelos Financeiros:**
+
+| Modelo | **CapEx (Capital Expenditure)** | **OpEx (Operational Expenditure)** |
 | :--- | :--- | :--- |
-| **Proteção Primária** | Protege contra falhas em nível de **datacenter**. Ele usa **LRS** (3 cópias em um único datacenter) na região primária. | Protege contra falhas em nível de **Zona de Disponibilidade**. Ele usa **ZRS** (3 cópias espalhadas por 3 zonas) na região primária. |
-| **Proteção Secundária** | Replica os dados para uma região secundária (a centenas de quilômetros de distância). | Também replica os dados para uma região secundária. |
-| **Resiliência** | Se o datacenter inteiro na região primária ficar offline (ex: por uma inundação ou falha de energia), seus dados ainda estarão seguros, mas podem não estar acessíveis para leitura/escrita até que a Microsoft faça o failover para a região secundária. | É **mais resiliente**. Se uma Zona de Disponibilidade inteira cair na região primária, sua aplicação pode continuar funcionando normalmente, pois os dados ainda estão disponíveis nas outras duas zonas. O failover para a outra região só é necessário se a região primária inteira for afetada. |
-| **Custo** | Mais barato que GZRS. | Mais caro que GRS, devido à maior complexidade e disponibilidade. |
-| **Quando usar?** | Bom para cenários de backup e recuperação de desastres onde um pequeno tempo de inatividade durante um desastre regional é aceitável. | Ideal para aplicações de missão crítica que exigem a **máxima disponibilidade** possível, protegendo tanto contra falhas de datacenter quanto desastres regionais completos. |
+| **Definição** | Gasto inicial em ativos físicos. | Gasto contínuo em serviços. |
+| **Exemplo** | Comprar servidores para um datacenter. | Pagar uma fatura mensal do Azure. |
+| **Associação** | Modelo tradicional *on-premises*. | Modelo principal da nuvem. |
 
-**Conclusão Prática:** Use **GZRS** quando sua aplicação não pode parar de funcionar mesmo que um datacenter inteiro na sua região principal seja comprometido. Se a sua prioridade é apenas ter um backup em outra geografia para recuperação de desastres, **GRS** pode ser suficiente.
 
-#### b) Exemplos de Uso do Azure Arc
+### Tópico 2: Benefícios da Computação em Nuvem
 
-O Azure Arc estende o painel de gerenciamento do Azure para infraestruturas que estão **fora do Azure**. Pense nele como uma ponte que permite gerenciar seus servidores locais, em outras nuvens (AWS, Google Cloud) ou na borda (edge) usando as ferramentas do Azure.
+- **⚡ Alta Disponibilidade:** Garantia de que os serviços estão sempre em execução, medida pelo **SLA (Service Level Agreement)**.
 
-* **Exemplo 1: Governança Centralizada para Servidores Híbridos**
-    * **Cenário:** Uma empresa de varejo possui servidores em suas lojas físicas (on-premises) e também VMs no Azure. Eles querem garantir que todos os servidores, independentemente de onde estejam, sigam as mesmas políticas de segurança (ex: ter um antivírus específico instalado e o firewall ativado).
-    * **Com Azure Arc:** Eles instalam o agente do Arc nos servidores das lojas. Imediatamente, esses servidores aparecem no Portal do Azure. A equipe de TI pode então usar o **Azure Policy** para aplicar a mesma política de segurança a todos os servidores (locais e na nuvem) a partir de um único local.
+| SLA | Tempo de Inatividade Máximo por Mês |
+| :--- | :--- |
+| `99%` | ~7.2 horas |
+| `99.9%` | ~43.8 minutos |
+| `99.95%`| ~21.9 minutos |
+| `99.99%`| ~4.3 minutos |
 
-* **Exemplo 2: Implantação de Aplicações em Múltiplas Nuvens com Kubernetes**
-    * **Cenário:** Uma equipe de desenvolvimento usa Kubernetes para suas aplicações. Eles têm clusters Kubernetes rodando no Azure (AKS), em um datacenter local e também na AWS. Gerenciar a implantação de aplicações em todos esses clusters é complexo e propenso a erros.
-    * **Com Azure Arc:** Eles conectam todos os clusters Kubernetes (local, AWS) ao Azure Arc. Agora, podem usar o GitOps (uma prática de DevOps) para implantar e atualizar suas aplicações em todos os clusters de forma consistente e automatizada, diretamente do Azure.
+- **📈 Escalabilidade:** Capacidade de aumentar ou diminuir recursos **verticalmente** (mais poder, ex: adicionar CPU/RAM a uma VM).
+- **🤸 Elasticidade:** Capacidade de escalar recursos **horizontalmente** (mais instâncias, ex: adicionar/remover VMs) de forma automática.
+- **🛡️ Confiabilidade:** A arquitetura descentralizada garante resiliência contra falhas.
+- **🔮 Previsibilidade:** Capacidade de prever custos e desempenho com ferramentas como o *Microsoft Azure Well-Architected Framework*.
+- **🔒 Segurança:** Responsabilidade compartilhada entre o provedor (segurança *da* nuvem) e o cliente (segurança *na* nuvem).
+- **🏛️ Governança:** Ferramentas para alinhar o uso da nuvem às políticas corporativas.
+- **🛠️ Gerenciabilidade:** Gerenciamento centralizado via Portal Azure, PowerShell, CLI e APIs.
 
-* **Exemplo 3: Gerenciamento de Banco de Dados SQL Server em Qualquer Lugar**
-    * **Cenário:** Um hospital tem um banco de dados SQL Server rodando em seu datacenter local que armazena informações críticas de pacientes. Eles querem aproveitar os recursos de segurança avançada do Azure, como o Microsoft Defender, sem migrar o banco de dados para a nuvem.
-    * **Com Azure Arc:** Eles habilitam o Azure Arc para o SQL Server local. Isso permite que eles usem o **Microsoft Defender para Nuvem** para monitorar vulnerabilidades e ameaças nesse banco de dados, como se ele estivesse rodando no Azure.
+### Tópico 3: Tipos de Serviço de Nuvem
+
+| Tipo | **IaaS (Infraestrutura como Serviço)** | **PaaS (Plataforma como Serviço)** | **SaaS (Software como Serviço)** |
+| :--- | :--- | :--- | :--- |
+| **Descrição** | Aluguel da infraestrutura básica. | Plataforma para desenvolver e rodar apps. | Software pronto para uso. |
+| **Você Gerencia**| S.O., Aplicações, Dados. | Apenas Aplicações e Dados. | Apenas o uso e as configurações. |
+| **Exemplo Azure**| Máquinas Virtuais (VMs) | Serviço de Aplicativo, Azure SQL | Microsoft 365, Dynamics 365 |
+
+- **Modelo de Responsabilidade Compartilhada:** Define a divisão de responsabilidades. Quanto mais você gerencia (IaaS), maior sua responsabilidade.
+
+  ![Modelo de Responsabilidade Compartilhada](https://github.com/user-attachments/assets/35fe9c36-4d47-4ab9-954f-8b81f5d6b848)
 
 ---
 
-### 4. Organização em Tabelas Comparativas
+## 🏗️ Módulo 2: Componentes de Arquitetura do Azure
 
-Visualizar as diferenças ajuda a fixar os conceitos.
+### Tópico 1: Arquitetura e Serviços do Azure
 
-#### Tabela 1: IaaS vs. PaaS vs. SaaS
+- **Geografia do Azure:**
+  - **Regiões:** Uma área geográfica contendo múltiplos datacenters.
+  - **Zonas de Disponibilidade:** Datacenters fisicamente separados dentro de uma região, com energia, refrigeração e redes independentes. Protegem contra falhas em nível de datacenter.
+  - **Pares de Regiões:** Uma região é emparelhada com outra na mesma geografia para recuperação de desastres.
 
-| Você Gerencia | Infraestrutura como Serviço (IaaS) | Plataforma como Serviço (PaaS) | Software como Serviço (SaaS) |
-| :--- | :--- | :--- | :--- |
-| **Aplicações e Dados** | ✅ Sim | ✅ Sim | ❌ Não |
-| **Sistema Operacional** | ✅ Sim | ❌ Não | ❌ Não |
-| **Middleware e Runtimes** | ✅ Sim | ❌ Não | ❌ Não |
-| **Rede, Armazenamento, Servidores**| ❌ Não (Gerenciado pelo Provedor)| ❌ Não (Gerenciado pelo Provedor)| ❌ Não (Gerenciado pelo Provedor)|
-| **Exemplo Azure** | Máquinas Virtuais (VMs) | Serviço de Aplicativo, Azure Functions| Microsoft 365, Dynamics 365 |
+- **Estrutura de Gerenciamento do Azure:**
+> A estrutura organizacional do Azure permite aplicar governança e gerenciar o acesso de forma hierárquica e granular.
 
-#### Tabela 2: Nuvem Pública vs. Privada vs. Híbrida
+  ```mermaid
+  graph TD
+      A[🏢 Grupo de Gerenciamento] --> B[💳 Assinatura A];
+      A --> C[💳 Assinatura B];
+      B --> D[🗂️ Grupo de Recursos 1];
+      B --> E[🗂️ Grupo de Recursos 2];
+      D --> F[⚙️ Recurso VM];
+      D --> G[⚙️ Recurso Rede];
+  ```
+  - **Grupos de Gerenciamento:** Aplicam governança (políticas, RBAC) a múltiplas assinaturas.
+  - **Assinaturas:** Unidade de cobrança e limite de acesso aos recursos.
+  - **Grupos de Recursos:** Contêiner lógico para agrupar recursos de uma solução.
 
-| Característica | Nuvem Pública | Nuvem Privada | Nuvem Híbrida |
-| :--- | :--- | :--- | :--- |
-| **Propriedade** | Provedor de nuvem (Microsoft, AWS) | Sua organização | Mista |
-| **Acessibilidade**| Via internet pública | Acesso restrito à organização | Ambos |
-| **Controle** | Menor controle sobre a infraestrutura| Controle total | Flexível |
-| **Custo** | Pague pelo uso (OpEx) | Alto custo inicial (CapEx) | Otimiza custos usando o melhor de cada|
-| **Caso de Uso** | Websites, apps móveis, desenvolvimento | Dados sensíveis, requisitos regulatórios | Usar a nuvem pública para picos de demanda, manter dados sensíveis localmente |
+### Tópico 2: Computação e Rede no Azure
+
+- **Serviços de Computação:**
+  - **Máquinas Virtuais (VMs):** Servidores virtuais (IaaS).
+  - **Conjuntos de Dimensionamento de VMs:** Gerencia um grupo de VMs com balanceamento de carga e dimensionamento automático.
+  - **Contêineres (ACI & AKS):** ACI para contêineres simples (PaaS), AKS para orquestração robusta com Kubernetes.
+  - **Azure Functions:** Computação *Serverless* que executa código baseado em eventos.
+  - **Serviços de Aplicativos:** Plataforma gerenciada (PaaS) para hospedar aplicações web e APIs.
+
+- **Serviços de Rede:**
+  - **Rede Virtual (VNet):** Rede privada e isolada no Azure.
+  - **Gateway de VPN:** Conecta uma VNet a uma rede local pela internet pública (criptografado).
+  - **ExpressRoute:** Conexão privada e dedicada entre seu datacenter e o Azure.
+
+### Tópico 3: Armazenamento do Azure
+
+- **Redundância de Armazenamento:**
+
+| Sigla | Nome | Proteção Contra |
+| :---- | :--- | :--- |
+| **LRS** | Redundância Local | Falha de disco/rack |
+| **ZRS** | Redundância de Zona | Falha de datacenter |
+| **GRS** | Redundância Geográfica | Desastre regional |
+| **GZRS**| Redundância de Zona Geográfica| Falha de datacenter **E** desastre regional |
+
+- **Serviços de Armazenamento:**
+  - **Blob do Azure:** Para dados não estruturados (imagens, vídeos, logs).
+  - **Arquivos do Azure:** Compartilhamentos de arquivos de rede na nuvem (protocolo SMB).
+  - **Disco do Azure:** Discos de bloco para VMs.
+
+- **Camadas de Acesso (Blob):**
+  - **Hot (Frequente):** Dados acessados frequentemente.
+  - **Cool (Esporádico):** Dados com pouco acesso (mín. 30 dias).
+  - **Cold (Frio):** Dados raramente acessados (mín. 90 dias).
+  - **Archive (Arquivo Morto):** Dados de longo prazo, raramente acessados (mín. 180 dias).
+
+### Tópico 4: Identidade, Acesso e Segurança
+
+> **Microsoft Entra ID** (antigo Azure AD) é o serviço de gerenciamento de identidades e acesso do Azure.
+
+- **Principais Recursos:**
+  - **Autenticação e Autorização:** Verifica a identidade e define o que o usuário pode acessar.
+  - **Autenticação Multifator (MFA):** Camada adicional de segurança que exige duas ou mais formas de verificação.
+  - **Acesso Condicional:** Políticas "se-então" para impor controles de acesso (ex: SE o usuário está em uma rede desconhecida, ENTÃO exigir MFA).
+  - **RBAC (Controle de Acesso Baseado em Função):** Concede permissões atribuindo funções (Leitor, Colaborador) a usuários em escopos específicos.
+- **Modelos de Segurança:**
+  - **Confiança Zero (Zero Trust):** Modelo que assume violação e verifica cada solicitação.
+  - **Microsoft Defender para Nuvem:** Ferramenta para gerenciamento de postura de segurança e proteção contra ameaças.
 
 ---
-**Respostas das Perguntas:**
-1.  **C) De CapEx para OpEx** - Trocar um grande gasto inicial (Capital Expenditure) por um custo operacional contínuo (Operational Expenditure).
-2.  **B) Apenas do cliente.** - No modelo IaaS, o cliente é responsável pelo que está "dentro" da VM, incluindo o sistema operacional, dados e aplicações.
-3.  **D) Azure Policy** - É a ferramenta de governança projetada para criar, atribuir e gerenciar políticas que impõem regras sobre os recursos.
-4.  **D) Blob do Azure (Azure Blob Storage)** - É otimizado para armazenar quantidades massivas de dados não estruturados, como arquivos de mídia.
+
+## 🏛️ Módulo 3: Gerenciamento e Governança
+
+### Tópico 1: Gerenciamento de Custos no Azure
+
+- **Ferramentas de Planejamento:**
+  - **Calculadora de Preços:** Estima o custo mensal dos serviços.
+  - **Calculadora de Custo Total de Propriedade (TCO):** Estima a economia ao migrar para o Azure.
+- **Ferramentas de Otimização:**
+  - **Gerenciamento de Custos e Cobrança:** Analisa, gerencia e otimiza gastos. Permite criar **orçamentos** e **alertas**.
+  - **Marcas (Tags):** Pares de chave-valor aplicados aos recursos para organização e rastreamento de custos. Tags **não são herdadas**.
+
+### Tópico 2: Governança e Conformidade no Azure
+
+- **Azure Policy:**
+  > Cria e gerencia políticas para impor regras e garantir a conformidade dos recursos. Ex: "Permitir VMs apenas da série D".
+- **Bloqueios de Recursos:**
+  > Protegem recursos contra exclusão (`CanNotDelete`) ou modificação (`ReadOnly`) acidental. Bloqueios **são herdados**.
+- **Microsoft Purview:** Solução de governança de dados para mapear e gerenciar dados em ambientes locais e multinuvem.
+- **Portal de Confiança do Serviço:** Documentação sobre a conformidade da Microsoft com padrões e regulamentações.
+
+### Tópico 3: Ferramentas de Gerenciamento e Implantação
+
+- **Ferramentas de Interação:**
+  - **Portal do Azure:** Interface web.
+  - **Azure PowerShell / CLI:** Ferramentas de linha de comando para automação.
+  - **Azure Cloud Shell:** Shell interativo no navegador.
+- **Azure Arc:**
+  > Estende o painel de gerenciamento do Azure para infraestruturas **fora** do Azure (on-premises, AWS, GCP), permitindo governança unificada.
+- **Infraestrutura como Código (IaC):**
+  > Prática de gerenciar infraestrutura via código (Modelos ARM, Bicep, Terraform) para automação e consistência.
+
+### Tópico 4: Ferramentas de Monitoramento do Azure
+
+- **Assistente do Azure (Azure Advisor):**
+  > Consultor de nuvem que fornece recomendações para otimizar recursos em Custo, Segurança, Confiabilidade, Desempenho e Excelência Operacional.
+- **Integridade do Serviço do Azure:**
+  - **Status do Azure:** Visão global da saúde dos serviços Azure.
+  - **Integridade do Serviço:** Visão personalizada da saúde dos serviços que **você** usa.
+  - **Resource Health:** Saúde dos **seus recursos individuais**.
+- **Azure Monitor:** Plataforma completa para coletar, analisar e agir com base em telemetria e logs de suas aplicações e infraestrutura.
+
+---
+
+## 📚 Referências e Links Úteis
+
+- [Microsoft Learn: Roteiro de Aprendizagem AZ-900](https://learn.microsoft.com/pt-br/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/)
+- [Calculadora de Preços do Azure](https://azure.microsoft.com/pt-br/pricing/calculator/)
+- [Calculadora de Custo Total de Propriedade (TCO)](https://azure.microsoft.com/pt-br/pricing/tco/calculator/)
+- [Documentação do Azure](https://learn.microsoft.com/pt-br/azure/)
+- [Portal de Confiança do Serviço da Microsoft](https://servicetrust.microsoft.com/)

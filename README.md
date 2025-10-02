@@ -169,7 +169,7 @@
         - Alertas: quando o custo excede o limite estipulado;
         - Recomendação: recomendaçoes de como usar meus recursos;
 - **Marcas(TAGs):** **Não sao obrigatorio e Nao sao Herdadas** Tags são elementos que você aplica aos seus recursos do Azure. São pares de chave-valor que ajudam a identificar recursos com base em configurações relevantes para a sua organização. Se quiser rastrear o ambiente de implantação dos seus recursos.
-### TOPICO 2 - GOVERNANÇA E CONFORMIDADE
+### Topico 2 - Governança e Conformidade
 - **Azure Policy::** ajudar impor padroes organizacionais e a avilar a conformidade em escala. Avalia e identifica os recursos do azure que nao atende as suas politicas.
   - Non-Compliant:
   - Remediantion: 
@@ -177,4 +177,14 @@
 - **Bloqueio de Recursos:** Proteje um recurso do Azure de exclusao ou modificação acidental.Pode ser adicionado na Assinatura, Grupo de recurso ou niveis de recursos individuais. Blouqeios sao herdaveis.
 - **Portal de confiança do serviço:** Fornece uma variedade de conteúdos, ferramentas e outros recursos sobre como os serviços cloud da Microsoft protegem os seus dados e como pode gerir a segurança e conformidade de dados na cloud para a sua organização.
 - **Microsoft Purview:** É uma familia de soluçoes de governança, risco e conformidade de dados, usado para auditar dados.
-- 
+### Topico 3 - Ferramentas de Gerenciamento e Implantação
+- **Ferramentas para interar com o Azure:**
+  - Portal Azure;
+  - Azure PowerShell;
+  - Azure Cloud Shell;
+  - CLI;
+- **Azure Arc:**  Simplifica a governança e o gerenciamento ao fornecer uma plataforma de gerenciamento multinuvem e local consistente.
+- **Azure Resource Manager(ARM):** É um serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure.
+  - Modelo do ARM – Um arquivo JSON (JavaScript Object Notation) que define um ou mais recursos para implantação em grupo de recursos, assinatura, grupo de gerenciamento ou locatário. Use o modelo para implantar os recursos de forma consistente e repetida.
+- **Infraestrutura como codigo:** É a prática de gerenciar recursos de nuvem usando código, como Bicep e Terraform, em vez de processos manuais. Isso proporciona automação, consistência, e repetibilidade na implantação de infraestrutura, reduzindo erros, facilitando a colaboração entre equipes e permitindo o controle de versão de toda a infraestrutura no Azure.
+- **Biceps:** Linguagem nativa da microsoft, compativel somente com nuvem da microsoft.

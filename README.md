@@ -188,3 +188,15 @@
   - Modelo do ARM – Um arquivo JSON (JavaScript Object Notation) que define um ou mais recursos para implantação em grupo de recursos, assinatura, grupo de gerenciamento ou locatário. Use o modelo para implantar os recursos de forma consistente e repetida.
 - **Infraestrutura como codigo:** É a prática de gerenciar recursos de nuvem usando código, como Bicep e Terraform, em vez de processos manuais. Isso proporciona automação, consistência, e repetibilidade na implantação de infraestrutura, reduzindo erros, facilitando a colaboração entre equipes e permitindo o controle de versão de toda a infraestrutura no Azure.
 - **Biceps:** Linguagem nativa da microsoft, compativel somente com nuvem da microsoft.
+### Topico 4 - Ferramentas de Monitoramento do Azure
+- **Assistente do Azure:** Analise recursos e faz recomendacoes com base nas praticas recomendadas para otimizar.
+  - Confiabilidade;
+  - Segurança;
+  - Desempenho;
+  - Custo;
+  - Excelencia Operacional;
+- **Integridade do Serviço do Azure:** É uma colecão de serviços que mantem voce informado sobre o status geral do Azure.
+  - Status do Azure: Visão global da integridade de todos os serviços do azure em todas as regioes.
+  - Integridade do serviço: Exibição focada apenas nos serviços e reigoes que voce esta usando.
+  - Resource Health: exibe informaçoes sobre a integridade de seus recursos de numve individual.
+- **Azure Monitor:** Maximiza a disponibilidade e o desempenho de aplicativos e serviços coletados, analisando e tomando decisoes com base na telemetria.
